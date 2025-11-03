@@ -21,7 +21,7 @@ function includeHTML() {
 	}
 }
 
-function buildPokedex(addLinks, externalMode, otherUniverse) {
+function buildPokedex(addLinks, currentUniverse, externalMode, otherUniverse) {
 	
 	var dexLinks, dexSprites, dexTrackers, i;
 	
@@ -37,8 +37,8 @@ function buildPokedex(addLinks, externalMode, otherUniverse) {
 	
 	for (i = 0; i < (dexTrackers.length); i++) {
 		iString = i.toString();
-		dexTrackers[i].id = iString;
-		functionString = "toggleCaught('" + iString + "')"
+		dexTrackers[i].id = currentUniverse + iString;
+		functionString = "toggleCaught('" + currentUniverse + iString + "')"
 		slotHeaders[i].setAttribute("onclick", functionString);
 		spriteCells[i].setAttribute("onclick", functionString);
 		typeRows[i].setAttribute("onclick", functionString);
@@ -137,16 +137,16 @@ function toggleCaught(pid) {
 	}
 }
 
-function loadSave() {
+function loadSave(currentUniverse) {
 	var slot, i;
 	slot = document.getElementsByClassName("dex-tracker");
 	for (i = 0; i < (slot.length); i++) {
-		if (getCookie(i.toString()) == "caught") {
+		if (getCookie(currentUniverse + i.toString()) == "caught") {
 			slot[i].classList.toggle("caught");
-			setCookie(i.toString(), "caught", 400);
-		} else if (getCookie(i.toString()) == "seen") {
+			setCookie(currentUniverse + i.toString(), "caught", 400);
+		} else if (getCookie(currentUniverse + i.toString()) == "seen") {
 			slot[i].classList.toggle("seen");
-			setCookie(i.toString(), "seen", 400);
+			setCookie(currentUniverse + i.toString(), "seen", 400);
 		}
 	}
 }
