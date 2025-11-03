@@ -186,11 +186,12 @@ function waveCollapse() {
 		"Who are you running from?",
 		"You know how I never like letting people see my unfinished work.",
 		"Seven years of computer science for this, huh?",
-		"Waiting for something to happen?",
 		"Welcome to the zone between zones.",
+		"Waiting for something to happen?",
 		"Warning: Nonstandard Spacetime",
-		"If you're not careful and noclip out of reality in the wrong areas, you'll end up in this error page.",
-		"This is the dimension of imagination."
+		"If you're not careful and you noclip out of reality in the wrong areas, you'll end up in this error page.",
+		"This is the dimension of imagination.",
+		"Logic will get you from A to Z; imagination will get you everywhere."
 	)
 	var fun = Math.floor(Math.random()*fallerThoughts.length);
 	echo = fallerThoughts[fun];
