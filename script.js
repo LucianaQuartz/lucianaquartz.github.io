@@ -66,15 +66,15 @@ function buildPokedex(addLinks, currentUniverse, externalMode, otherUniverse) {
 	}
 }
 
-function toggleBar(id) {
+function toggleBar(id, btn) {
 	var bar = document.getElementById(id);
 	if (bar.style.display === "none") {
 		bar.style.display = "block";
-		bar.style.background = "url('/Resources/MobileButtonActive.png') no-repeat";
+		btn.style.background = "url('/Resources/MobileButtonActive.png') no-repeat";
 	}
 	else {
 		bar.style.display = "none";
-		bar.style.background = "url('/Resources/MobileButton.png') no-repeat";
+		btn.style.background = "url('/Resources/MobileButton.png') no-repeat";
 	}
 }
 
