@@ -428,6 +428,17 @@ a:hover {
 	top: 185px;
 }
 
+
+.image-wrap {
+	text-align: center;
+}
+
+.image-wrap a {
+	display: inline-block;
+}
+	top: 185px;
+}
+
 /*Pokédex General Styles=======================================================================*/
 
 p.data {
