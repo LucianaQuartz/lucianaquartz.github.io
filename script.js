@@ -66,8 +66,9 @@ function buildPokedex(addLinks, currentUniverse, externalMode, otherUniverse) {
 	}
 }
 
-function toggleBar(id, btn) {
+function toggleBar(id, btnName) {
 	var bar = document.getElementById(id);
+	var btn = document.getElementById(btnName);
 	if (bar.style.display === "none") {
 		bar.style.display = "block";
 		btn.style.background = "url('/Resources/MobileButtonActive.png') no-repeat";
@@ -165,39 +166,35 @@ function loadSavedForms() {
 function waveCollapse() {
 	var fallerThoughts = Array(
 		"Hahaha, I guess not. That white hand on your shoulder... I'm just imagining it.",
+		"The Raichu you traded to me went and evolved!",
 		"By the way, who is that standing behind you?",
 		"No, you're not the one...",
-		"I'm going to go for help. Wait in the usual place.",
-		"I wonder what he meant. Ice cream, maybe?",
 		"Where... Where am I?",
+		"It is a dream. But then again, life is a dream.",
 		"Hello, starlight...",
-		"Shhh! Please walk quietly in the hallway.",
-		"You've met with a terrible fate, haven't you?",
+		"Shhh! Please walk quietly in the hallway!",
+		"Delicious Cake",
+		"XD3R-B8HH-9ZR2-FL16",
+		"I am Error.",
 		"I think you are lost. It’s got to be around here somewhere...",
-		"Have you ever thought of a world where everything is exactly the same... except you don't exist?",
+		"Have you ever thought of a world where everything is exactly the same... Except this page exists?",
 		"Please don't think about this anymore.",
-		"Yes, your friend... The one behind you, with the creepy smile.",
-		"I just wasn't ready for the responsibility.",
 		"Can anyone hear me? Help...",
 		"It's dark... It's so dark here...",
-		"It could not be.",
 		"The pain itself is reason why.",
-		"It's funny because we're all living in a simulation and free will is a lie.",
+		"It pulls the strings and makes them ring.",
+		"Don't forget, don't forget... Especially, the don't.",
 		"Who are you running from?",
-		"You know how I never like letting people see my unfinished work.",
-		"Seven years of computer science for this, huh?",
 		"Welcome to the zone between zones.",
-		"Waiting for something to happen?",
 		"Warning: Nonstandard Spacetime",
 		"If you're not careful and you noclip out of reality in the wrong areas, you'll end up in this error page.",
-		"This is the dimension of imagination.",
-		"Logic will get you from A to Z; imagination will get you everywhere."
+		"This is the dimension of imagination."
 	)
 	var fun = Math.floor(Math.random()*fallerThoughts.length);
 	echo = fallerThoughts[fun];
 	abyss = document.getElementsByClassName("abyss");
 	abyss[0].innerText = echo;
-	pid = Math.floor(Math.random() * 66) + 1
+	pid = Math.floor(Math.random() * 256)
 	if (pid == 66) {
 		G = document.getElementsByClassName("G");
 		G[0].src = "/Resources/Giratina-Origin-Shiny.png";
