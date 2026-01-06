@@ -164,31 +164,25 @@ function loadSavedForms() {
 }
 
 function waveCollapse() {
-	var fallerThoughts = Array(
+	var voices = Array(
 		"Hahaha, I guess not. That white hand on your shoulder... I'm just imagining it.",
-		"The Raichu you traded to me went and evolved!",
 		"By the way, who is that standing behind you?",
 		"No, you're not the one...",
-		"Where... Where am I?",
-		"It is a dream. But then again, life is a dream.",
+		"You guys need some imagination.",
 		"Hello, starlight...",
 		"Shhh! Please walk quietly in the hallway!",
-		"Delicious Cake",
-		"XD3R-B8HH-9ZR2-FL16",
 		"I am Error.",
 		"I think you are lost. It’s got to be around here somewhere...",
 		"Have you ever thought of a world where everything is exactly the same... Except this page exists?",
+		"I just wasn't ready for the responsibility.",
 		"Please don't think about this anymore.",
-		"Can anyone hear me? Help...",
-		"It's dark... It's so dark here...",
 		"The pain itself is reason why.",
-		"It pulls the strings and makes them ring.",
-		"Don't forget, don't forget... Especially, the don't.",
+		"You know how I never like letting people see my unfinished work.",
 		"Who are you running from?",
 		"Welcome to the zone between zones.",
-		"Warning: Nonstandard Spacetime",
-		"If you're not careful and you noclip out of reality in the wrong areas, you'll end up in this error page.",
-		"This is the dimension of imagination."
+		"The difference between zero and one is as great as one and infinity.",
+		"This is the dimension of imagination.",
+		"Don't forget... Especially, the don't."
 	)
 	var fun = Math.floor(Math.random()*fallerThoughts.length);
 	echo = fallerThoughts[fun];
