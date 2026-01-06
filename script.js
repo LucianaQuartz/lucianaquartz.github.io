@@ -164,11 +164,12 @@ function loadSavedForms() {
 }
 
 function waveCollapse() {
-	var voices = Array(
+	var fallerThoughts = Array(
 		"Hahaha, I guess not. That white hand on your shoulder... I'm just imagining it.",
 		"By the way, who is that standing behind you?",
 		"No, you're not the one...",
 		"You guys need some imagination.",
+		"But then again, life is a dream.",
 		"Hello, starlight...",
 		"Shhh! Please walk quietly in the hallway!",
 		"I am Error.",
@@ -180,9 +181,10 @@ function waveCollapse() {
 		"You know how I never like letting people see my unfinished work.",
 		"Who are you running from?",
 		"Welcome to the zone between zones.",
-		"The difference between zero and one is as great as one and infinity.",
+		"The difference between zero and one is as vast as that between one and infinity.",
 		"This is the dimension of imagination.",
-		"Don't forget... Especially, the don't."
+		"Don't forget... Especially, the don't.",
+		"While logic can take you from A to Z, imagination can take you anywhere."
 	)
 	var fun = Math.floor(Math.random()*fallerThoughts.length);
 	echo = fallerThoughts[fun];
