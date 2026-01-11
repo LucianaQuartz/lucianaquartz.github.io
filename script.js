@@ -183,8 +183,7 @@ function waveCollapse() {
 		"Welcome to the zone between zones.",
 		"The difference between zero and one is as vast as that between one and infinity.",
 		"This is the dimension of imagination.",
-		"Don't forget... Especially, the don't.",
-		"While logic can take you from A to Z, imagination can take you anywhere."
+		"Don't forget... Especially, the don't."
 	)
 	var fun = Math.floor(Math.random()*fallerThoughts.length);
 	echo = fallerThoughts[fun];
