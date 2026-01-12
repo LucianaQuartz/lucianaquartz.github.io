@@ -182,7 +182,6 @@ function waveCollapse() {
 		"You know how I never like letting people see my unfinished work.",
 		"Welcome to the zone between zones.",
 		"This is the dimension of imagination.",
-		"The difference between 0 and 1 is about the same as 1 and infinity.",
 		"Don't forget... Especially, the don't."
 	)
 	var fun = Math.floor(Math.random()*fallerThoughts.length);
