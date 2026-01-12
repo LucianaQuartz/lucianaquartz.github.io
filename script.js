@@ -170,19 +170,19 @@ function waveCollapse() {
 		"No, you're not the one...",
 		"You guys need some imagination.",
 		"But then again, life is a dream.",
-		"Hello, starlight...",
-		"Shhh! Please walk quietly in the hallway!",
+		"Hello, Starlight...",
+		"Please walk quietly in the hallway.",
 		"I am Error.",
 		"I think you are lost. It’s got to be around here somewhere...",
 		"Have you ever thought of a world where everything is exactly the same... Except this page exists?",
 		"I just wasn't ready for the responsibility.",
 		"Please don't think about this anymore.",
 		"The pain itself is reason why.",
-		"You know how I never like letting people see my unfinished work.",
 		"Who are you running from?",
+		"You know how I never like letting people see my unfinished work.",
 		"Welcome to the zone between zones.",
-		"The difference between zero and one is as vast as that between one and infinity.",
 		"This is the dimension of imagination.",
+		"The difference between 0 and 1 is about the same as 1 and infinity.",
 		"Don't forget... Especially, the don't."
 	)
 	var fun = Math.floor(Math.random()*fallerThoughts.length);
