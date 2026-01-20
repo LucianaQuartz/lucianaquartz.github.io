@@ -86,18 +86,10 @@
 </div>
 <script>
     const universe = "quartz";
-
-    document.addEventListener("DOMContentLoaded", () => {
-        includeHTML();    // load header/sidebar/navbar
-        stylizeTypes();   // color type boxes
-        loadSave();       // restore caught/seen states
-
-        // Attach click handlers
-        const trackers = document.getElementsByClassName("tracker-outline");
-        for (let i = 0; i < trackers.length; i++) {
-            const id = trackers[i].id;
-            trackers[i].addEventListener("click", () => toggleCaught(id));
-        }
+    includeHTML(() => {
+        stylizeTypes();
+        loadSave();
+        attachTrackerClicks();
     });
 </script>
 </body>
