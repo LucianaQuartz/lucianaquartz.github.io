@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/styles.css">
     <script src="/script.js"></script>
     <meta name="viewport" content="width=device-width"/>
-    <meta name="description" content="Pokémon Quartz is a project dedicated to documenting and archiving new Fakemon while maintaining consistent quality and presentation."/>
+    <meta name="description" content="The Fakemon Library is a project dedicated to documenting and archiving new Fakemon while maintaining consistent quality and presentation."/>
 </head>
 <body>
 <div id="page">
@@ -20,7 +20,7 @@
 <p>This page lists all Fakemon in Pokédex order.</p>
 <div class="gallery-container">
 
-<div class="tracker-outline">
+<div class="tracker-outline" id="pokmonquartz-chapebaya">
     <table class="dex-tracker">
         <tr>
             <th class="slot-header" colspan="2">
@@ -29,7 +29,7 @@
         </tr>
         <tr>
             <td class="sprite-cell" colspan="2">
-                <img src="sprites/chapebaya.png" class="dex-sprite"><img>
+                <img src="sprites/chapebaya.png" class="dex-sprite">
             </td>
         </tr>
         <tr class="type-row">
@@ -39,7 +39,7 @@
 </div>
 
 
-<div class="tracker-outline">
+<div class="tracker-outline" id="pokmonquartz-denpecha">
     <table class="dex-tracker">
         <tr>
             <th class="slot-header" colspan="2">
@@ -48,7 +48,7 @@
         </tr>
         <tr>
             <td class="sprite-cell" colspan="2">
-                <img src="sprites/denpecha.png" class="dex-sprite"><img>
+                <img src="sprites/denpecha.png" class="dex-sprite">
             </td>
         </tr>
         <tr class="type-row">
@@ -59,7 +59,7 @@
 </div>
 
 
-<div class="tracker-outline">
+<div class="tracker-outline" id="pokmonquartz-denfrota-male">
     <table class="dex-tracker">
         <tr>
             <th class="slot-header" colspan="2">
@@ -68,7 +68,7 @@
         </tr>
         <tr>
             <td class="sprite-cell" colspan="2">
-                <img src="sprites/denfrota-male.png" class="dex-sprite"><img>
+                <img src="sprites/denfrota-male.png" class="dex-sprite">
             </td>
         </tr>
         <tr class="type-row">
@@ -87,8 +87,7 @@
 <script>
     includeHTML();
     stylizeTypes();
-    buildPokedex(true, "Quartz-main", false, "");
-    loadSave("Quartz-main");
+    loadSave(); // IDs are now unique per project, no extra args needed
 </script>
 </body>
 </html>
