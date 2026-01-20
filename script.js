@@ -100,14 +100,12 @@ function loadSave() {
 }
 
 // --------------------------
-// Example: toggle tracker on click
+// Attach click events to all trackers
 // --------------------------
-document.addEventListener("DOMContentLoaded", () => {
-    loadSave();
-    stylizeTypes();
-
-    let trackers = document.getElementsByClassName("tracker-outline");
+function attachTrackerClicks() {
+    const trackers = document.getElementsByClassName("tracker-outline");
     for (let i = 0; i < trackers.length; i++) {
-        trackers[i].addEventListener("click", () => toggleCaught(trackers[i].id));
+        let id = trackers[i].id; // each tracker has a unique ID from the HTML
+        trackers[i].addEventListener("click", () => toggleCaught(id));
     }
-});
+}
