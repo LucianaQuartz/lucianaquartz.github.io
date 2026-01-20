@@ -654,6 +654,20 @@ table.caught td {
 	background: #b2f6cd;
 }
 
+.tracker-outline.seen table.dex-tracker th {
+    background: #e2d676;
+}
+.tracker-outline.seen table.dex-tracker td {
+    background: #f6f3b2;
+}
+
+.tracker-outline.caught table.dex-tracker th {
+    background: #76e27d;
+}
+.tracker-outline.caught table.dex-tracker td {
+    background: #b2f6cd;
+}
+
 th.slot-header {
 	text-align: left;
 	font-weight: normal;
