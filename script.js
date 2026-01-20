@@ -1,19 +1,24 @@
 // --------------------------
 // Include HTML for components
 // --------------------------
-function includeHTML() {
+function includeHTML(callback) {
     let elements = document.getElementsByTagName("*");
+    let pending = 0;
+
     for (let i = 0; i < elements.length; i++) {
         let elmnt = elements[i];
         let file = elmnt.getAttribute("include-html");
         if (file) {
+            pending++;
             let xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4) {
                     if (this.status == 200) { elmnt.innerHTML = this.responseText; }
                     if (this.status == 404) { elmnt.innerHTML = "Wild MissingNo. appeared!"; }
                     elmnt.removeAttribute("include-html");
-                    includeHTML();
+                    pending--;
+                    if (pending === 0 && callback) callback(); // run callback after all HTML loaded
+                    includeHTML(callback); // recursively include nested files
                 }
             }      
             xhttp.open("GET", file, true);
@@ -21,6 +26,8 @@ function includeHTML() {
             return;
         }
     }
+    // If no files to include and callback exists, run it
+    if (pending === 0 && callback) callback();
 }
 
 // --------------------------
