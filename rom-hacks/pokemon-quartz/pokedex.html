@@ -20,7 +20,7 @@
 <p>This page lists all Fakemon in Pokédex order.</p>
 <div class="gallery-container">
 
-<div class="tracker-outline" id="Quartz-main-chapebaya">
+<div class="tracker-outline" id="quartz-chapebaya">
     <table class="dex-tracker">
         <tr>
             <th class="slot-header" colspan="2">
@@ -39,7 +39,7 @@
 </div>
 
 
-<div class="tracker-outline" id="Quartz-main-denpecha">
+<div class="tracker-outline" id="quartz-denpecha">
     <table class="dex-tracker">
         <tr>
             <th class="slot-header" colspan="2">
@@ -59,7 +59,7 @@
 </div>
 
 
-<div class="tracker-outline" id="Quartz-main-denfrotamale">
+<div class="tracker-outline" id="quartz-denfrotamale">
     <table class="dex-tracker">
         <tr>
             <th class="slot-header" colspan="2">
@@ -85,11 +85,19 @@
 <footer include-html="/footer.html"></footer>
 </div>
 <script>
-    const universe = "Quartz-main";  // Used for cookie IDs
-    includeHTML(() => {
-        stylizeTypes();
-        loadSave();
-        attachTrackerClicks();
+    const universe = "quartz";
+
+    document.addEventListener("DOMContentLoaded", () => {
+        includeHTML();    // load header/sidebar/navbar
+        stylizeTypes();   // color type boxes
+        loadSave();       // restore caught/seen states
+
+        // Attach click handlers
+        const trackers = document.getElementsByClassName("tracker-outline");
+        for (let i = 0; i < trackers.length; i++) {
+            const id = trackers[i].id;
+            trackers[i].addEventListener("click", () => toggleCaught(id));
+        }
     });
 </script>
 </body>
