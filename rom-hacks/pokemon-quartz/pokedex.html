@@ -20,7 +20,7 @@
 <p>This page lists all Fakemon in Pokédex order.</p>
 <div class="gallery-container">
 
-<div class="tracker-outline" id="pokmonquartz-chapebaya">
+<div class="tracker-outline" id="Quartz-main-chapebaya">
     <table class="dex-tracker">
         <tr>
             <th class="slot-header" colspan="2">
@@ -39,7 +39,7 @@
 </div>
 
 
-<div class="tracker-outline" id="pokmonquartz-denpecha">
+<div class="tracker-outline" id="Quartz-main-denpecha">
     <table class="dex-tracker">
         <tr>
             <th class="slot-header" colspan="2">
@@ -59,16 +59,16 @@
 </div>
 
 
-<div class="tracker-outline" id="pokmonquartz-denfrota-male">
+<div class="tracker-outline" id="Quartz-main-denfrotamale">
     <table class="dex-tracker">
         <tr>
             <th class="slot-header" colspan="2">
-                003 <a href="pokedex/denfrota-male.html" class="dex-link">Denfrota</a>
+                003 <a href="pokedex/denfrotamale.html" class="dex-link">Denfrota</a>
             </th>
         </tr>
         <tr>
             <td class="sprite-cell" colspan="2">
-                <img src="sprites/denfrota-male.png" class="dex-sprite">
+                <img src="sprites/denfrotamale.png" class="dex-sprite">
             </td>
         </tr>
         <tr class="type-row">
@@ -85,10 +85,12 @@
 <footer include-html="/footer.html"></footer>
 </div>
 <script>
-    includeHTML();
-    stylizeTypes();
-    loadSave(universe);
-    attachTrackerClicks();
+    const universe = "Quartz-main";  // Used for cookie IDs
+    includeHTML(() => {
+        stylizeTypes();
+        loadSave();
+        attachTrackerClicks();
+    });
 </script>
 </body>
 </html>
