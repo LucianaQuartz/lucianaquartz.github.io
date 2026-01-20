@@ -87,7 +87,17 @@
 <script>
     includeHTML();
     stylizeTypes();
-    loadSave(); // IDs are now unique per project, no extra args needed
+
+    const universe = "Quartz-main"; // keep IDs consistent
+
+    // Attach click events to all dex-tracker tables
+    document.querySelectorAll(".dex-tracker").forEach((tracker, i) => {
+        tracker.id = universe + i; // set the ID
+        tracker.addEventListener("click", () => toggleCaught(universe + i));
+    });
+
+    // Restore caught/seen state from cookies
+    loadSave(universe);
 </script>
 </body>
 </html>
