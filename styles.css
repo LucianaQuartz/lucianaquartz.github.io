@@ -93,7 +93,7 @@ img.float-center {
 	margin: 0px;
 	padding: 0px;
 	cursor: pointer;
-	background: url("/Resources/MobileButton.png") no-repeat;
+	background: url("/resources/mobile-button.png") no-repeat;
 	background-size: cover;
 }
 
@@ -127,13 +127,13 @@ img.float-center {
 
 @font-face {
 	font-family: ubuntuLight;
-	src: url('./Resources/Fonts/ubuntulight-bold.ttf') format('truetype');
+	src: url('./resources/fonts/ubuntulight-bold.ttf') format('truetype');
 	font-weight: bold;
 }
 
 @font-face {
 	font-family: notoSansPokeDollar;
-	src: url('./Resources/Fonts/notosanspokedollar-regular.ttf') format('truetype');
+	src: url('./resources/fonts/notosanspokedollar-regular.ttf') format('truetype');
 }
 
 h1.barheader {
@@ -430,13 +430,12 @@ a:hover {
 
 
 .image-wrap {
-	text-align: center;
+	display: flex;
+	justify-content: center;
 }
 
 .image-wrap a {
 	display: inline-block;
-}
-	top: 185px;
 }
 
 /*Pokédex General Styles=======================================================================*/
@@ -821,7 +820,7 @@ td.speed {
 }
 
 td.total {
-	background-image: url("/Resources/StatTotalBackground.png");
+	background-image: url("/resources/stat-total-background.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 }

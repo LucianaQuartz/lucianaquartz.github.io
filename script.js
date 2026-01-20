@@ -71,11 +71,11 @@ function toggleBar(id, btnName) {
 	var btn = document.getElementById(btnName);
 	if (bar.style.display === "none") {
 		bar.style.display = "block";
-		btn.style.background = "url('/Resources/MobileButtonActive.png') no-repeat";
+		btn.style.background = "url('/resources/mobil-button-on.png') no-repeat";
 	}
 	else {
 		bar.style.display = "none";
-		btn.style.background = "url('/Resources/MobileButton.png') no-repeat";
+		btn.style.background = "url('/resources/mobile-button.png') no-repeat";
 	}
 }
 
@@ -120,7 +120,7 @@ function getCookie(cname) {
 }
 
 function toggleCaught(pid) {
-	//Inspired by Lyra's website, this lets you track which Pokémon you have caught in each ROM hack/fan game
+	//Inspired by Lyra's website, this lets you track which Pokémon you have caught in each Pokémon ROM hack and/or fan game
 	
 	var element = document.getElementById(pid);
 	
@@ -170,8 +170,9 @@ function waveCollapse() {
 		"No, you're not the one...",
 		"You guys need some imagination.",
 		"But then again, life is a dream.",
-		"Hello, Starlight...",
-		"Please walk quietly in the hallway.",
+		"Hello, starlight...",
+		"Look at you go, I just adore you.",
+		"Shhh! Please walk quietly in the hallway!",
 		"I am Error.",
 		"I think you are lost. It’s got to be around here somewhere...",
 		"Have you ever thought of a world where everything is exactly the same... Except this page exists?",
@@ -191,6 +192,6 @@ function waveCollapse() {
 	pid = Math.floor(Math.random() * 256)
 	if (pid == 66) {
 		G = document.getElementsByClassName("G");
-		G[0].src = "/Resources/Giratina-Origin-Shiny.png";
+		G[0].src = "/resources/lost-giratina-shiny.png";
 	}
 }
