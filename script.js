@@ -2,52 +2,50 @@
 // Include HTML for components
 // --------------------------
 function includeHTML(callback) {
-    let elements = document.getElementsByTagName("*");
-    let pending = 0;
-
-    for (let i = 0; i < elements.length; i++) {
-        let elmnt = elements[i];
-        let file = elmnt.getAttribute("include-html");
-        if (file) {
-            pending++;
-            let xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                    if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                    if (this.status == 404) { elmnt.innerHTML = "Wild MissingNo. appeared!"; }
-                    elmnt.removeAttribute("include-html");
-                    pending--;
-                    if (pending === 0 && callback) callback(); // run callback after all HTML loaded
-                    includeHTML(callback); // recursively include nested files
-                }
-            }      
-            xhttp.open("GET", file, true);
-            xhttp.send();
-            return;
-        }
+    const elements = document.querySelectorAll("[include-html]");
+    if (elements.length === 0) {
+        if (callback) callback();
+        return;
     }
-    // If no files to include and callback exists, run it
-    if (pending === 0 && callback) callback();
+
+    const elmnt = elements[0];
+    const file = elmnt.getAttribute("include-html");
+    if (!file) return;
+
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4) {
+            if (this.status === 200) {
+                elmnt.innerHTML = this.responseText;
+            } else if (this.status === 404) {
+                elmnt.innerHTML = "Wild MissingNo. appeared!";
+            }
+            elmnt.removeAttribute("include-html");
+            // Recursively call until all includes are loaded
+            includeHTML(callback);
+        }
+    };
+    xhttp.open("GET", file, true);
+    xhttp.send();
 }
 
 // --------------------------
 // Stylize Pokémon types
 // --------------------------
 function stylizeTypes() {
-    let typeElements = document.getElementsByClassName("type");
-    for (let i = 0; i < typeElements.length; i++) {
-        let t = typeElements[i].innerText;
+    document.querySelectorAll(".type").forEach(el => {
+        const t = el.innerText;
         switch (t) {
             case "Unknown":
-                typeElements[i].className = "type nkdf";
+                el.className = "type nkdf";
                 break;
             case "???":
-                typeElements[i].className = "type qqq";
+                el.className = "type qqq";
                 break;
             default:
-                typeElements[i].className = "type " + t;
+                el.className = "type " + t;
         }
-    }
+    });
 }
 
 // --------------------------
@@ -55,17 +53,17 @@ function stylizeTypes() {
 // --------------------------
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    document.cookie = cname + "=" + cvalue + ";expires=" + d.toUTCString() + ";path=/";
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    document.cookie = `${cname}=${cvalue};expires=${d.toUTCString()};path=/`;
 }
 
 function getCookie(cname) {
-    let name = cname + "=";
-    let decoded = decodeURIComponent(document.cookie);
-    let ca = decoded.split(';');
-    for (let i = 0; i < ca.length; i++) {
-        let c = ca[i].trim();
-        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+    const name = cname + "=";
+    const decoded = decodeURIComponent(document.cookie);
+    const ca = decoded.split(";");
+    for (let c of ca) {
+        c = c.trim();
+        if (c.indexOf(name) === 0) return c.substring(name.length);
     }
     return "";
 }
@@ -74,7 +72,7 @@ function getCookie(cname) {
 // Toggle caught/seen on click
 // --------------------------
 function toggleCaught(id) {
-    let el = document.getElementById(id);
+    const el = document.getElementById(id);
     if (!el) return;
 
     if (el.classList.contains("caught")) {
@@ -94,25 +92,29 @@ function toggleCaught(id) {
 // Load saved caught/seen status
 // --------------------------
 function loadSave() {
-    let trackers = document.getElementsByClassName("tracker-outline");
-    for (let i = 0; i < trackers.length; i++) {
-        let id = trackers[i].id;
-        let status = getCookie(id);
-        if (status === "caught") {
-            trackers[i].classList.add("caught");
-        } else if (status === "seen") {
-            trackers[i].classList.add("seen");
-        }
-    }
+    document.querySelectorAll(".tracker-outline").forEach(el => {
+        const status = getCookie(el.id);
+        if (status === "caught") el.classList.add("caught");
+        else if (status === "seen") el.classList.add("seen");
+    });
 }
 
 // --------------------------
 // Attach click events to all trackers
 // --------------------------
 function attachTrackerClicks() {
-    const trackers = document.getElementsByClassName("tracker-outline");
-    for (let i = 0; i < trackers.length; i++) {
-        let id = trackers[i].id; // each tracker has a unique ID from the HTML
-        trackers[i].addEventListener("click", () => toggleCaught(id));
-    }
+    document.querySelectorAll(".tracker-outline").forEach(el => {
+        el.addEventListener("click", () => toggleCaught(el.id));
+    });
+}
+
+// --------------------------
+// Initialize everything
+// --------------------------
+function initPokedex(universe) {
+    includeHTML(() => {
+        stylizeTypes();
+        loadSave();
+        attachTrackerClicks();
+    });
 }
