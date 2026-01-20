@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <link rel="shortcut icon" href="/resources/library-con.png">
+    <title>Pokédex | Pokémon Quartz | The Fakemon Library</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/script.js"></script>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="description" content="The Fakemon Library is a project dedicated to documenting and archiving as many Fakemon as possible while maintaining consistent quality and presentation."/>
+</head>
+<body>
+<div id="page">
+<header include-html="/header.html"></header>
+<div id="main-div">
+<div id="pokenav" include-html="/navbar.html"></div>
+<div id="pokenav-mobile" include-html="/navbar.html" style="display: none;"></div>
+<article>
+<h1>Pokémon Quartz &mdash; Pokédex</h1>
+<p>Pokémon Quartz introduced new Fakemon. Many are direct stand-ins for official Pokémon.</p>
+<p>This page lists all Fakemon in Pokédex order.</p>
+<div class="gallery-container">
+
+<div class="tracker-outline">
+    <table class="dex-tracker">
+        <tr>
+            <th class="slot-header" colspan="2">
+                001 <a href="chapebaya.html" class="dex-link">Chapebaya</a>
+            </th>
+        </tr>
+        <tr>
+            <td class="sprite-cell" colspan="2">
+                <img src="../icons/chapebaya.png" class="dex-sprite"><img>
+            </td>
+        </tr>
+        <tr class="type-row">
+            <td class="type-cell" colspan="2"><p class="type">Grass</p></td>
+        </tr>
+    </table>
+</div>
+
+
+<div class="tracker-outline">
+    <table class="dex-tracker">
+        <tr>
+            <th class="slot-header" colspan="2">
+                002 <a href="denpecha.html" class="dex-link">Denpecha</a>
+            </th>
+        </tr>
+        <tr>
+            <td class="sprite-cell" colspan="2">
+                <img src="../icons/denpecha.png" class="dex-sprite"><img>
+            </td>
+        </tr>
+        <tr class="type-row">
+            <td class="type-cell cell50"><p class="type">Grass</p></td>
+<td class="type-cell cell50"><p class="type">Ground</p></td>
+        </tr>
+    </table>
+</div>
+
+
+<div class="tracker-outline">
+    <table class="dex-tracker">
+        <tr>
+            <th class="slot-header" colspan="2">
+                003 <a href="denfrota-male.html" class="dex-link">Denfrota</a>
+            </th>
+        </tr>
+        <tr>
+            <td class="sprite-cell" colspan="2">
+                <img src="../icons/denfrota-male.png" class="dex-sprite"><img>
+            </td>
+        </tr>
+        <tr class="type-row">
+            <td class="type-cell" colspan="2"><p class="type">Grass</p></td>
+        </tr>
+    </table>
+</div>
+
+</div>
+</article>
+<div id="pokegear" include-html="sidebar.html"></div>
+<div id="pokegear-mobile" include-html="sidebar.html" style="display: none;"></div>
+</div>
+<footer include-html="/footer.html"></footer>
+</div>
+<script>
+    includeHTML();
+    stylizeTypes();
+    buildPokedex(true, "Quartz-main", false, "");
+    loadSave("Quartz-main");
+</script>
+</body>
+</html>
