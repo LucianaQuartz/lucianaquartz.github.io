@@ -104,7 +104,16 @@ function loadSave() {
 // --------------------------
 function attachTrackerClicks() {
     document.querySelectorAll(".tracker-outline").forEach(el => {
+        // Toggle tracker on click
         el.addEventListener("click", () => toggleCaught(el.id));
+
+        // Prevent links inside the tracker from toggling state
+        const link = el.querySelector("a.dex-link");
+        if (link) {
+            link.addEventListener("click", (e) => {
+                e.stopPropagation(); // stops the tracker click from firing
+            });
+        }
     });
 }
 
