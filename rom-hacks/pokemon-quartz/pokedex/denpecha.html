@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+		<link rel="shortcut icon" href="/Resources/Icon.png">
+		<title>Denpecha | Pokémon Quartz | The Fakemon Library</title>
+		<link rel="stylesheet" href="/styles.css">
+		<script src="/script.js"></script>
+		<meta name="viewport" content="width=device-width"/>
+		<meta name="description" content="Denpecha is a Pokémon introduced in Pokémon Quartz. The Fakemon Library is a project dedicated to documenting and archiving as many Fakemon as possible while maintaining consistent quality and presentation."/>
+	</head>
+
+	<body>
+	
+		<div id="page">
+		
+			<header include-html="/header.html">
+			</header>
+			
+			<div id="main-div">
+			
+				<div id="pokenav" include-html="/navbar.html">
+				</div>
+				
+				<div id="pokenav-mobile" include-html="/navbar.html" style="display: none;">
+				</div>
+				
+				<article>
+				
+					<table id="nav-table" class="full">
+						<tr>
+							<th class="col35 rightalign">
+								<a href="chapebaya.html">
+									Chapebaya
+								</a>
+							</th>
+							<th class="col30">
+								<a href="../pokedex.html">Pokédex</a>
+							</th>
+							<th class="col35 leftalign">
+								<a href="denfrota.html">
+									Denfrota
+								</a>
+							</th>
+						</tr>
+					</table>
+				
+					<div include-html="../families/chapebaya.html">
+					</div>
+					
+				</article>
+				
+				<div id="pokegear" include-html="../sidebar.html">
+				</div>
+				<div id="pokegear-mobile" include-html="../sidebar.html" style="display: none;">
+				</div>
+			</div>
+			
+			<footer include-html="/footer.html">
+			</footer>
+		
+		</div>
+		
+		<script>
+			includeHTML();
+			stylizeTypes();
+			buildPokedex("quartz");
+			loadSave("quartz");
+		</script>
+		
+	</body>
+</html>
