@@ -783,11 +783,11 @@ table.dex-stats {
 	background-color: #fffdb4;
 	text-align: left;
 }
-.spatk {
+.special-attack {
 	background-color: #b4b5ff;
 	text-align: left;
 }
-.spdef {
+.special-defense {
 	background-color: #b4ffc4;
 	text-align: left;
 }
@@ -814,13 +814,13 @@ td.defense {
 	background-color: #fffee3;
 	text-align: right;
 }
-td.spatk {
+td.special-attack {
 	padding: 0px;
 	margin: 0px;
 	background-color: #e0e1ff;
 	text-align: right;
 }
-td.spdef {
+td.special-defense {
 	padding: 0px;
 	margin: 0px;
 	background-color: #e7ffec;
