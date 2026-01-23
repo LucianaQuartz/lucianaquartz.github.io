@@ -757,6 +757,9 @@ table.dex-data {
 	max-width: 100%;
 	width: 396px;
 }
+td.lore-page {
+	max-height: 100%;
+}
 th.dexh {
 	width: 35%;
 }
