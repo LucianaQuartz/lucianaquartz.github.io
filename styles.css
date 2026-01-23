@@ -766,7 +766,6 @@ th.lore {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	line-height: 1.2;
 	padding: 0 6px;
 	overflow: hidden;            /*Prevents height growth*/
 	text-align: center;
