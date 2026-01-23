@@ -762,11 +762,10 @@ th.lore {
 }
 
 .lore-header {
-	height: 2.6em;               /*SAME height for all headers*/
+	height: 1.2em;               /*SAME height for all headers*/
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 0 6px;
 	overflow: hidden;            /*Prevents height growth*/
 	text-align: center;
 }
