@@ -759,15 +759,17 @@ table.dex-data {
 }
 th.lore {
 	padding: 0;
+	height: 1.2em;
+	line-height: 1.2em;
+	vertical-align: middle;
 }
 
 .lore-header {
-	height: 1.2em;               /*SAME height for all headers*/
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	overflow: hidden;            /*Prevents height growth*/
-	text-align: center;
+	height: 100%;
+	line-height: inherit;
 }
 td.lore {
 	vertical-align: top;
