@@ -758,9 +758,8 @@ table.dex-data {
 	width: 396px;
 }
 th.lore {
-	padding: 0.25em 0.5em;   /* match normal <th> padding */
-	line-height: normal;
-	vertical-align: middle;
+	padding: inherit;
+	line-height: inherit;
 }
 
 .lore-header {
