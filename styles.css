@@ -337,6 +337,15 @@ h3 {
 	background-color: #ffc0b7;
 }
 
+.page-subsection {
+    font-family: ubuntuLight;
+    font-size: 16pt;
+    text-align: center;
+    margin: 0px 0px 15px 0px;
+    padding: 2px 7px;
+    background-color: #ffc0b7;
+}
+
 p {
 	font-family: notoSansPokeDollar;
 	padding: 0px 2px 0px 2px;
@@ -949,8 +958,14 @@ img.shape {
 
 h4 {
 	font-family: ubuntuLight;
-	font-size: 12pt;
 	text-align: center;
 	margin: 0px 0px 15px 0px;
 	font-size: 14pt;
+}
+
+.form-label {
+    font-family: ubuntuLight;
+    font-size: 14pt;
+    text-align: center;
+    margin: 0px 0px 15px 0px;
 }
