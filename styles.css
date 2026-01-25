@@ -109,7 +109,7 @@ img.float-center {
 	padding: 0;
 	margin: 0;
 	width: 200px;
-	background-color: #f0d0f1;
+	background-color: #f9dffa;
 }
 #pokenav-mobile {
 	font-family: notoSansPokeDollar;
@@ -118,7 +118,7 @@ img.float-center {
 	width: 200px;
 	margin: 0;
 	padding: 0px;
-	background-color: #f0d0f1;
+	background-color: #f9dffa;
 	
 	position: fixed;
 	top: 82px;
@@ -139,7 +139,7 @@ img.float-center {
 h1.barheader {
 	margin: 0;
 	padding: 15px;
-	background: #9287bf;
+	background: #9182cc;
 	font-family: ubuntuLight;
 	color: white;
 	font-size: 15pt;
@@ -191,7 +191,7 @@ article {
 	margin: 0;
 	padding: 0;
 	width: 200px;
-	background-color: #f0d0f1;
+	background-color: #f9dffa;
 }
 #pokegear-mobile {
 	font-family: notoSansPokeDollar;
@@ -200,7 +200,7 @@ article {
 	margin: 0;
 	padding: 0px;
 	width: 200px;
-	background-color: #f0d0f1;
+	background-color: #f9dffa;
 	
 	position: fixed;
 	top: 82px;
