@@ -16,7 +16,7 @@ body {
 	max-width: 1420px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: eadce9;
+	background-color: c4bed5;
 }
 
 #page {
@@ -170,7 +170,7 @@ li a {
 	text-decoration: none;
 }
 li a:hover {
-	background-color: #d7c9d8;
+	background-color: #9f6dff;
 	color: white;
 	text-decoration: none;
 }
