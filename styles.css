@@ -9,21 +9,23 @@ html {
 }
 
 body {
-	height: 100%;
-	font-family: sans-serif;
-	padding: 0;
-	margin: 0;
-	max-width: 1420px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: fff1fd;
+    min-height: 100%;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff1fd;
 }
 
 #page {
 	display: flex;
-	flex-flow: column;
-	margin: auto;
-	height: 100%;
+    flex-flow: column;
+
+    max-width: 1420px;
+    margin: 0 auto;
+    min-height: 100%;
+
+    /* Optional: page background */
+    background-color: white;
 }
 
 header {
