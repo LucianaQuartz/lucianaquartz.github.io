@@ -139,7 +139,7 @@ img.float-center {
 h1.barheader {
 	margin: 0;
 	padding: 15px;
-	background: #d1bcd4;
+	background: #691bff;
 	font-family: ubuntuLight;
 	color: white;
 	font-size: 15pt;
@@ -170,7 +170,7 @@ li a {
 	text-decoration: none;
 }
 li a:hover {
-	background-color: #9f6dff;
+	background-color: #d7c9d8;
 	color: white;
 	text-decoration: none;
 }
