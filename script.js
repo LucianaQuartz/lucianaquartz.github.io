@@ -127,3 +127,39 @@ function initPokedex(universe) {
         attachTrackerClicks();
     });
 }
+
+// --------------------------
+// Initialize everything
+// --------------------------
+function waveCollapse() {
+	var fallerThoughts = Array(
+		"Hahaha, I guess not. That white hand on your shoulder... I'm just imagining it.",
+		"By the way, who is that standing behind you?",
+		"No, you're not the one...",
+		"You guys need some imagination.",
+		"But then again, life is a dream.",
+		"Hello, starlight...",
+		"Look at you go, I just adore you.",
+		"Shhh! Please walk quietly in the hallway!",
+		"I am Error.",
+		"I think you are lost. It’s got to be around here somewhere...",
+		"Have you ever thought of a world where everything is exactly the same... Except this page exists?",
+		"I just wasn't ready for the responsibility.",
+		"Please don't think about this anymore.",
+		"The pain itself is reason why.",
+		"Who are you running from?",
+		"You know how I never like letting people see my unfinished work.",
+		"Welcome to the zone between zones.",
+		"This is the dimension of imagination.",
+		"Don't forget... Especially, the don't."
+	)
+	var fun = Math.floor(Math.random()*fallerThoughts.length);
+	echo = fallerThoughts[fun];
+	abyss = document.getElementsByClassName("abyss");
+	abyss[0].innerText = echo;
+	pid = Math.floor(Math.random() * 256)
+	if (pid == 66) {
+		G = document.getElementsByClassName("G");
+		G[0].src = "/resources/lost-giratina-shiny.png";
+	}
+}
