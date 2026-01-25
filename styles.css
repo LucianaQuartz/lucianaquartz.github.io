@@ -6,6 +6,7 @@
 html {
 	height: 100%;
 	margin: 0;
+	background-color: fff1fd;
 }
 
 body {
@@ -16,7 +17,7 @@ body {
 	max-width: 1420px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: c4bed5;
+	background-color: white;
 }
 
 #page {
@@ -139,7 +140,7 @@ img.float-center {
 h1.barheader {
 	margin: 0;
 	padding: 15px;
-	background: #691bff;
+	background: #7e3aff;
 	font-family: ubuntuLight;
 	color: white;
 	font-size: 15pt;
