@@ -943,12 +943,15 @@ td.dex-page {
 img.footprint {
 	max-height: 32px;
 	max-width: 32px;
-	vertical-align: middle;
+	display: block;
+	margin: auto;
 }
 
 img.shape {
 	max-height: 32px;
 	max-width: 32px;
+	display: block;
+	margin: auto;
 }
 
 .col60 {
