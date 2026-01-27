@@ -580,7 +580,7 @@ td {
 	font-family: notoSansPokeDollar;
 	background-color: #fcfcff;
 	text-align: center;
-	vertical-align: center;
+	vertical-align: middle;
 }
 
 table.dex-list {
@@ -943,7 +943,7 @@ td.dex-page {
 img.footprint {
 	max-height: 32px;
 	max-width: 32px;
-	vertical-align: baseline;
+	vertical-align: middle;
 }
 
 img.shape {
